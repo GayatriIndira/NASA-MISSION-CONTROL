@@ -13,7 +13,7 @@
     "deploy": "npm run build --prefix nasa-front-end && npm start --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix nasa-front-end"
   },
-  "author": "Harshit Sharma",
+  "author": "Gayatri",
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^7.0.3"
