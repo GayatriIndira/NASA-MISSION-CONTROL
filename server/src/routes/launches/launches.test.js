@@ -1,13 +1,12 @@
 const request = require('supertest');
 const app = require('../../app');
 const { mongoConnect, mongoDisconnect } = require('../../services/mongo');
-const { loadPlanetsData } = require('../../models/planets.model');
+// const { loadPlanetsData } = require('../../models/planets.model');
 
 describe('Launches API', () => {
-// beforeAll is statement
     beforeAll(async() => {
        await mongoConnect();
-       await loadPlanetsData();
+    //    await loadPlanetsData();
     });
     afterAll(async() => {
         await mongoDisconnect();
@@ -18,8 +17,7 @@ describe('Launches API', () => {
             const response = await request(app)
             .get('/v1/launches')
             .expect('Content-Type', /json/)
-            .expect(200);
-            // expect(response.statusCode).toBe(200);   
+            .expect(200);   
         });
     });
     
