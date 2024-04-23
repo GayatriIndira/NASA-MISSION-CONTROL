@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Arwes, SoundsProvider } from "arwes";
+import { Arwes } from "arwes";
 
 import AppLayout from "./pages/AppLayout";
-import { resources, sounds } from "./settings";
+import { resources } from "./settings";
 
 // Define a basic theme object
 const theme = {
