@@ -11,6 +11,7 @@
     "nasa-front-end": "npm start --prefix nasa-front-end",
     "watch": "npm run server & npm run nasa-front-end",
     "deploy": "npm run build --prefix nasa-front-end && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix nasa-front-end && npm run cluster --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix nasa-front-end"
   },
   "author": "Gayatri",
@@ -19,6 +20,8 @@
     "cross-env": "^7.0.3"
   },
   "dependencies": {
+    "axios": "^1.6.8",
+    "mongoose": "^8.3.2",
     "morgan": "^1.10.0",
     "url": "^0.11.3"
   }
