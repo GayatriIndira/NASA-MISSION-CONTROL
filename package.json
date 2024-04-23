@@ -14,9 +14,7 @@
     "deploy-cluster": "npm run build --prefix nasa-front-end && npm run cluster --prefix server",
     "test": "npm test --prefix server && npm run test --prefix nasa-front-end"
   },
+  "keywords": [],
   "author": "Gayatri",
-  "license": "ISC",
-  "devDependencies": {
-    "cross-env": "^7.0.3"
-  }
+  "license": "ISC"
 }
