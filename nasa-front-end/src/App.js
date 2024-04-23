@@ -2,9 +2,9 @@ import {
   BrowserRouter as Router,
 } from "react-router-dom";
 import {
+  ThemeProvider,
   Arwes,
   SoundsProvider,
-  ThemeProvider,
   createSounds,
   createTheme,
 } from "arwes";
