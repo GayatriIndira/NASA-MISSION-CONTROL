@@ -6,7 +6,7 @@
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-nasa-front-end": "npm install --prefix nasa-front-end",
-    "install": "npm run install-server && npm run install-nasa-front-end",
+    "install": "npm run install server && npm run install nasa-front-end",
     "server": "npm run watch --prefix server",
     "nasa-front-end": "npm run watch --prefix nasa-front-end",
     "watch": "npm run server & npm run nasa-front-end",
