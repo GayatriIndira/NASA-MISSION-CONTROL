@@ -24,4 +24,4 @@ jobs:
        uses: supercharge/mongodb-github-action@1.6.0
      - run: npm install
      - run: npm run build --prefix nasa-front-end   
-    #  - run: npm test
+     - run: npm test
