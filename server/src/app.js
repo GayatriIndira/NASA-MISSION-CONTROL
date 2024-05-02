@@ -14,7 +14,7 @@ app.use(cors({
 app.use(morgan('combined'));
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));  //express.static is middleware function
 
 app.use('/v1',api);
 

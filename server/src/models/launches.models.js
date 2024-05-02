@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios');  //for making HTTP requests from a web browser or Node. js
 
 const launchesDatabase = require('./launches.mongo');
 const planets = require('./planets.mongo');
@@ -8,8 +8,7 @@ const DEFAULT_FLIGHT_NUMBER = 100;
 const launches = new Map();
 // let latestFlightNumber = 100;
 
-
-const SPACEX_API_URL = 'https://api.spacexdata.com/v4/launches/query';
+const SPACEX_API_URL = 'https://api.spacexdata.com/v4/launches/query';   //to retrieve launch data
 
 async function populateLaunches() {
     console.log('Downloading launch data...');
@@ -39,12 +38,13 @@ async function populateLaunches() {
         throw new Error('Launch data download failed');
     }
 
-    const launchDocs = response.data.docs;
+    const launchDocs = response.data.docs;  //retrieves an array of launch documents from the response object returned by a request to the SpaceX API
     for (const launchDoc of launchDocs) {
         const payloads = launchDoc['payloads'];
         const customers = payloads.flatMap((payload) => {
             return payload['customers'];
         });
+        //Create launch object
         const launch = {
             flightNumber: launchDoc['flight_number'],
             mission: launchDoc['name'],

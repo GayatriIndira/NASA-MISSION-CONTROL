@@ -4,11 +4,11 @@ const { mongoConnect, mongoDisconnect } = require('../../services/mongo');
 const { loadPlanetsData } = require('../../models/planets.model');
 
 describe('Launches API', () => {
-    beforeAll(async() => {
+    beforeAll(async() => {        //Connect to MongoDB before running tests
        await mongoConnect();
        await loadPlanetsData();
     });
-    afterAll(async() => {
+    afterAll(async() => {         //disconnect after all tests have finished
         await mongoDisconnect();
     });
 
@@ -20,7 +20,7 @@ describe('Launches API', () => {
             .expect(200);   
         });
     });
-    
+ 
     describe('Test POST / launches', () => {
         //Create object
         const completeLaunchData = {
@@ -82,4 +82,3 @@ describe('Launches API', () => {
         });
         });
 });
-

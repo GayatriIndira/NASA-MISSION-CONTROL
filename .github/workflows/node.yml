@@ -7,13 +7,13 @@ on:
 jobs:
   build:
     env:
-      CI: true
+      CI: true  #build is running in a CI environment
       MONGO_URL: mongodb://localhost/nasa
     strategy:
       matrix:
         node-version: ['20.11.1']
         mongodb-version: ['7.0.8']
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #ubuntu is OS on Linux
     steps: 
      - uses: actions/checkout@v4
      - name: Use Node.js version ${{matrix.node-version}}

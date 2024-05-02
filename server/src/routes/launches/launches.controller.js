@@ -1,3 +1,4 @@
+// const { listen } = require('../../app');
 const { getAllLaunches, scheduleNewLaunch, existsLaunchWithId, abortLaunchById } = require('../../models/launches.models');
 
 const { getPagination } = require('../../services/query');
@@ -38,7 +39,7 @@ async function httpAbortLaunch(req, res) {
             error: 'Launch not found',
         });
     }
-    
+
     const aborted = await abortLaunchById(launchId);
     
     if(!aborted) {

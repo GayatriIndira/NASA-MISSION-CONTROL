@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs');   //to read and write files
 const path = require('path');
 const { parse } = require('csv-parse');
 // const parse = require('csv-parser')
